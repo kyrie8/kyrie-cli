@@ -1,19 +1,18 @@
 #! /usr/bin/env node
 
 // npm link 绑定 bin
-console.log("kyrie cli")
 
-const program = require('commander')
-const helpOptions = require('./lib/core/help')
-const createCommands = require('./lib/core/create')
+const program = require('commander');
+const helpOptions = require('./lib/core/help');
+const createCommands = require('./lib/core/create');
 
 //查看版本号
-program.version(require('./package.json').version)
+program.version(require('./package.json').version);
 
 //帮助和可选信息
-helpOptions()
+helpOptions();
 
 //创建指令
-createCommands()
+createCommands();
 
-program.parse(process.argv)
+program.parse(process.argv);
