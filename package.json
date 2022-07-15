@@ -1,5 +1,5 @@
 {
-  "name": "cli",
+  "name": "kyrie-cli",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -9,8 +9,17 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "cli",
+    "vue",
+    "react"
+  ],
+  "author": "kyrie",
+  "homepage": "https://github.com/kyrie8/kyrie-cli",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kyrie8/kyrie-cli"
+  },
   "license": "ISC",
   "dependencies": {
     "commander": "^9.3.0",
