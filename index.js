@@ -2,4 +2,4 @@
 
 // npm link 绑定 bin
 
-require('./build');
+require('./build')
