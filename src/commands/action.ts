@@ -13,8 +13,10 @@ const createProjectAtion = async (project: string, name: keyof typeof projectTyp
   const url = projectType[name]
   await downloadClone(url, project, { clone: true }).catch(() => {
     spinnerStop('clone failed', 'FAILED')
+    process.exitCode = 1
+    return
   })
-  spinnerStart('install...')
+  spinnerStart('install...\n')
   const res = await commandSpawn(command, ['install'], { cwd: `./${project}` }).catch(() => {
     spinnerStop('install failed', 'FAILED')
   })

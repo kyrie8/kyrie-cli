@@ -15,6 +15,10 @@ const getLastPkgInfo = async () => {
   spinnerStart('检测版本中...')
   const pak = getPkgInfo()
   const { version } = await pacote.manifest(`${pak.name}@latest`)
+  if(!version) {
+    process.exitCode = 1
+    return
+  }
   return version === pak.version ? true : false
 }
 
